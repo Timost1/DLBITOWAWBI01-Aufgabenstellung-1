@@ -1,0 +1,14 @@
+/target/
+/daten/
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Werkzeuge
+.claude/

@@ -1,0 +1,33 @@
+/*
+ * Nur wenige globale Regeln: Farben, Abstaende und Typografie kommen aus dem
+ * zentralen Material-UI-Theme (siehe js/app.js). Eigenes CSS bleibt damit auf
+ * das beschraenkt, was ein Theme nicht abdeckt.
+ */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background-color: #f4f6f8;
+}
+
+/* Sprungmarke zum Hauptinhalt: erst bei Tastaturfokus sichtbar. */
+.sprungmarke {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1400;
+    padding: 12px 20px;
+    background: #0b3d91;
+    color: #ffffff;
+    font: 600 15px/1.4 system-ui, sans-serif;
+    text-decoration: none;
+}
+
+.sprungmarke:focus {
+    left: 8px;
+    top: 8px;
+}

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="520" viewBox="0 0 780 520" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="np" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#33415c"/>
+    </marker>
+    <marker id="ng" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a6d1f"/>
+    </marker>
+  </defs>
+  <style>
+    .st { fill:#eef3fb; stroke:#0b3d91; stroke-width:1.8; }
+    .sa { fill:#fbf6ea; stroke:#8a6d1f; stroke-width:1.8; }
+    .dg { fill:#ffffff; stroke:#8aa4cf; stroke-width:1.6; stroke-dasharray:6 4; }
+    .da { fill:#ffffff; stroke:#c2a85f; stroke-width:1.6; stroke-dasharray:6 4; }
+    .sn { font-size:15px; font-weight:700; fill:#0b3d91; text-anchor:middle; }
+    .sna { font-size:15px; font-weight:700; fill:#6b5416; text-anchor:middle; }
+    .ad { font-size:12.5px; fill:#3d4f75; text-anchor:middle; font-family:Consolas, monospace; }
+    .ada { font-size:12.5px; fill:#6b5416; text-anchor:middle; font-family:Consolas, monospace; }
+    .be { font-size:12px; fill:#5a6b8c; text-anchor:middle; }
+    .bea { font-size:12px; fill:#7d6526; text-anchor:middle; }
+    .kt { font-size:12.5px; fill:#33415c; }
+    .kta { font-size:12.5px; fill:#6b5416; }
+    .dn { font-size:12.5px; font-weight:600; fill:#12203c; text-anchor:middle; }
+  </style>
+
+  <rect width="780" height="520" fill="#ffffff"/>
+
+  <!-- Anmeldung -->
+  <rect class="st" x="20" y="196" width="180" height="76" rx="8"/>
+  <text class="sn" x="110" y="222">Anmeldung</text>
+  <text class="ad" x="110" y="242">ohne Sitzung</text>
+  <text class="be" x="110" y="261">E-Mail und Kennwort</text>
+
+  <!-- Projektübersicht -->
+  <rect class="st" x="290" y="120" width="200" height="86" rx="8"/>
+  <text class="sn" x="390" y="146">Projektübersicht</text>
+  <text class="ad" x="390" y="166">#/projekte</text>
+  <text class="be" x="390" y="185">Kacheln mit Fortschritt,</text>
+  <text class="be" x="390" y="200">Filter aktiv / archiviert</text>
+
+  <!-- Projektdetail -->
+  <rect class="st" x="570" y="120" width="190" height="86" rx="8"/>
+  <text class="sn" x="665" y="146">Projektdetail</text>
+  <text class="ad" x="665" y="166">#/projekte/{id}</text>
+  <text class="be" x="665" y="185">Stammdaten, Team,</text>
+  <text class="be" x="665" y="200">Fortschritt, Aufgaben</text>
+
+  <!-- Benutzerverwaltung -->
+  <rect class="sa" x="290" y="350" width="200" height="86" rx="8"/>
+  <text class="sna" x="390" y="376">Benutzerverwaltung</text>
+  <text class="ada" x="390" y="396">#/benutzer</text>
+  <text class="bea" x="390" y="415">Konten und Rollen,</text>
+  <text class="bea" x="390" y="430">nur Rolle ADMIN</text>
+
+  <!-- Dialoge -->
+  <rect class="dg" x="570" y="240" width="190" height="54" rx="8"/>
+  <text class="dn" x="665" y="262">Dialog: Aufgabe</text>
+  <text class="be" x="665" y="281">anlegen / bearbeiten</text>
+
+  <rect class="dg" x="570" y="318" width="190" height="54" rx="8"/>
+  <text class="dn" x="665" y="340">Dialog: Projekt</text>
+  <text class="be" x="665" y="359">anlegen / bearbeiten</text>
+
+  <rect class="da" x="290" y="462" width="200" height="46" rx="8"/>
+  <text class="dn" x="390" y="482">Dialog: Benutzerkonto</text>
+  <text class="bea" x="390" y="499">anlegen / bearbeiten</text>
+
+  <!-- Kanten -->
+  <path d="M 200 216 L 245 216 L 245 150 L 290 150" fill="none" stroke="#33415c" stroke-width="1.6" marker-end="url(#np)"/>
+  <text class="kt" x="246" y="192" text-anchor="middle">Anmeldung</text>
+
+  <path d="M 290 190 L 245 190 L 245 252 L 200 252" fill="none" stroke="#33415c" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#np)"/>
+  <text class="kt" x="40" y="292">Abmelden oder Sitzungsende</text>
+
+  <path d="M 490 145 L 570 145" fill="none" stroke="#33415c" stroke-width="1.6" marker-end="url(#np)"/>
+  <text class="kt" x="516" y="137" text-anchor="middle">„Projekt öffnen“</text>
+
+  <path d="M 570 182 L 530 182 L 530 196 L 490 196" fill="none" stroke="#33415c" stroke-width="1.6" marker-end="url(#np)"/>
+  <text class="kt" x="530" y="218" text-anchor="middle">Brotkrumenpfad</text>
+
+  <path d="M 665 206 L 665 240" fill="none" stroke="#8aa4cf" stroke-width="1.6" marker-end="url(#np)"/>
+  <path d="M 665 294 L 665 318" fill="none" stroke="#8aa4cf" stroke-width="1.6" marker-end="url(#np)"/>
+  <path d="M 490 178 L 520 178 L 520 345 L 570 345" fill="none" stroke="#8aa4cf" stroke-width="1.6" marker-end="url(#np)"/>
+  <path d="M 390 436 L 390 462" fill="none" stroke="#c2a85f" stroke-width="1.6" marker-end="url(#np)"/>
+
+  <!-- Hauptnavigation -->
+  <path d="M 350 206 L 350 350" fill="none" stroke="#8a6d1f" stroke-width="1.8" marker-end="url(#ng)"/>
+  <path d="M 430 350 L 430 206" fill="none" stroke="#8a6d1f" stroke-width="1.8" marker-end="url(#ng)"/>
+  <rect x="300" y="262" width="180" height="42" fill="#ffffff"/>
+  <text class="kta" x="390" y="278" text-anchor="middle">Hauptnavigation in der Kopfzeile</text>
+  <text class="kta" x="390" y="296" text-anchor="middle">(nur für Administratoren sichtbar)</text>
+
+  <!-- Legende -->
+  <rect x="20" y="308" width="250" height="146" rx="6" fill="#f7f9fc" stroke="#b9c4d8"/>
+  <text x="32" y="332" style="font-size:12.5px; font-weight:700; fill:#12203c">Legende</text>
+  <rect x="32" y="344" width="26" height="15" rx="3" fill="#eef3fb" stroke="#0b3d91"/>
+  <text class="kt" x="66" y="356">Seite mit eigener Adresse</text>
+  <rect x="32" y="368" width="26" height="15" rx="3" fill="#ffffff" stroke="#8aa4cf" stroke-dasharray="4 3"/>
+  <text class="kt" x="66" y="380">modaler Dialog</text>
+  <line x1="32" y1="400" x2="58" y2="400" stroke="#33415c" stroke-width="1.6" marker-end="url(#np)"/>
+  <text class="kt" x="66" y="404">Navigation durch Bedienung</text>
+  <text style="font-size:11.5px; fill:#5a6b8c" x="32" y="424">Vor- und Zurück-Schaltflächen des</text>
+  <text style="font-size:11.5px; fill:#5a6b8c" x="32" y="440">Browsers bleiben nutzbar.</text>
+</svg>

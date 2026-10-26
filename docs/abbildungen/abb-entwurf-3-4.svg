@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="930" viewBox="0 0 560 930" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="560" height="930" fill="#ffffff"/>
+<style>
+    .rahmen { fill:#ffffff; stroke:#8f9bb3; stroke-width:1.6; }
+    .titel { font-size:13.5px; font-weight:700; fill:#1a2540; }
+    .leiste { fill:#c7d2e4; stroke:#8f9bb3; stroke-width:1; }
+    .feld { fill:#f2f4f8; stroke:#a9b4c8; stroke-width:1; }
+    .knopf { fill:#8fa6cc; stroke:#5a6f96; stroke-width:1; }
+    .knopf2 { fill:#ffffff; stroke:#5a6f96; stroke-width:1; }
+    .platz { fill:#dfe4ec; }
+    .txt { font-size:10.5px; fill:#33415c; }
+    .txtw { font-size:10.5px; fill:#ffffff; font-weight:600; }
+    .txtk { font-size:9.5px; fill:#5a6b8c; }
+    .note { font-size:10px; fill:#7a6a2a; font-style:italic; }
+  </style>
+  <g transform="translate(-20,-422)">
+  <text x="40" y="452" class="titel">Entwurf 3 – Projektdetail (#/projekte/{id})</text>
+  <rect x="40" y="464" width="520" height="404" class="rahmen"/>
+  <rect x="40" y="464" width="520" height="28" class="leiste"/>
+  <text x="52" y="483" style="font-size:11px; font-weight:700; fill:#1a2540">Projektportal</text>
+  <text x="52" y="512" class="txtk">Projekte / Projektname</text>
+  <text x="52" y="534" style="font-size:13px; font-weight:700; fill:#1a2540">Projektname</text>
+  <rect x="168" y="524" width="40" height="14" rx="7" class="knopf"/>
+  <rect x="380" y="522" width="86" height="22" class="knopf2"/>
+  <text x="423" y="537" class="txtk" text-anchor="middle">Bearbeiten</text>
+  <rect x="470" y="522" width="78" height="22" class="knopf2"/>
+  <text x="509" y="537" class="txtk" text-anchor="middle">Archivieren</text>
+
+  <rect x="52" y="558" width="270" height="140" fill="#ffffff" stroke="#a9b4c8"/>
+  <text x="64" y="578" style="font-size:11.5px; font-weight:700; fill:#1a2540">Projektdaten</text>
+  <rect x="64" y="590" width="240" height="8" class="platz"/>
+  <rect x="64" y="604" width="200" height="8" class="platz"/>
+  <text x="64" y="632" class="txtk">Projektleitung</text>
+  <text x="180" y="632" class="txtk">Name</text>
+  <text x="64" y="652" class="txtk">Start / Ende</text>
+  <text x="180" y="652" class="txtk">Datum</text>
+  <text x="64" y="672" class="txtk">Mandant</text>
+  <text x="180" y="672" class="txtk">Name</text>
+
+  <rect x="334" y="558" width="214" height="70" fill="#ffffff" stroke="#a9b4c8"/>
+  <text x="346" y="578" style="font-size:11.5px; font-weight:700; fill:#1a2540">Fortschritt</text>
+  <rect x="346" y="592" width="190" height="8" rx="4" class="platz"/>
+  <rect x="346" y="592" width="82" height="8" rx="4" fill="#5a6f96"/>
+  <text x="346" y="616" class="txtk">x von y Aufgaben erledigt</text>
+
+  <rect x="334" y="640" width="214" height="58" fill="#ffffff" stroke="#a9b4c8"/>
+  <text x="346" y="660" style="font-size:11.5px; font-weight:700; fill:#1a2540">Team</text>
+  <rect x="346" y="670" width="70" height="16" rx="8" fill="#ffffff" stroke="#5a6f96"/>
+  <rect x="422" y="670" width="54" height="16" rx="8" class="platz"/>
+  <rect x="482" y="670" width="54" height="16" rx="8" class="platz"/>
+
+  <rect x="52" y="712" width="496" height="140" fill="#ffffff" stroke="#a9b4c8"/>
+  <text x="64" y="732" style="font-size:11.5px; font-weight:700; fill:#1a2540">Aufgaben (n)</text>
+  <rect x="430" y="722" width="106" height="20" class="knopf"/>
+  <text x="483" y="736" style="font-size:8.5px; fill:#ffffff; font-weight:600" text-anchor="middle">AUFGABE HINZUFÜGEN</text>
+  <line x1="64" y1="748" x2="536" y2="748" stroke="#c3cbda"/>
+  <text x="64" y="762" class="txtk">Aufgabe</text>
+  <text x="220" y="762" class="txtk">Bearbeitung</text>
+  <text x="300" y="762" class="txtk">Fällig am</text>
+  <text x="370" y="762" class="txtk">Status</text>
+  <text x="536" y="762" class="txtk" text-anchor="end">Aktionen</text>
+  <line x1="64" y1="768" x2="536" y2="768" stroke="#c3cbda"/>
+  <g>
+    <rect x="64" y="776" width="140" height="8" class="platz"/>
+    <rect x="220" y="776" width="60" height="8" class="platz"/>
+    <rect x="300" y="776" width="54" height="8" class="platz"/>
+    <rect x="370" y="772" width="86" height="18" fill="#ffffff" stroke="#a9b4c8"/>
+    <text x="380" y="785" class="txtk">Offen  ▾</text>
+    <rect x="470" y="776" width="66" height="8" class="platz"/>
+  </g>
+  <g>
+    <rect x="64" y="802" width="120" height="8" class="platz"/>
+    <rect x="220" y="802" width="60" height="8" class="platz"/>
+    <rect x="300" y="802" width="54" height="8" class="platz"/>
+    <rect x="370" y="798" width="86" height="18" fill="#ffffff" stroke="#a9b4c8"/>
+    <rect x="470" y="802" width="66" height="8" class="platz"/>
+  </g>
+  <g>
+    <rect x="64" y="828" width="150" height="8" class="platz"/>
+    <rect x="220" y="828" width="60" height="8" class="platz"/>
+    <rect x="300" y="828" width="54" height="8" class="platz"/>
+    <rect x="370" y="824" width="86" height="18" fill="#ffffff" stroke="#a9b4c8"/>
+    <rect x="470" y="828" width="66" height="8" class="platz"/>
+  </g>
+
+  </g>
+  <g transform="translate(-600,30)">
+  <text x="620" y="452" class="titel">Entwurf 4 – Benutzerverwaltung (#/benutzer, nur ADMIN)</text>
+  <rect x="620" y="464" width="520" height="404" class="rahmen"/>
+  <rect x="620" y="464" width="520" height="28" class="leiste"/>
+  <text x="632" y="483" style="font-size:11px; font-weight:700; fill:#1a2540">Projektportal</text>
+
+  <text x="632" y="516" style="font-size:13px; font-weight:700; fill:#1a2540">Benutzerverwaltung</text>
+  <text x="632" y="532" class="txtk">Konten und Rollen des Mandanten</text>
+  <rect x="1030" y="506" width="98" height="24" class="knopf"/>
+  <text x="1079" y="522" class="txtw" text-anchor="middle">KONTO ANLEGEN</text>
+
+  <rect x="632" y="548" width="496" height="220" fill="#ffffff" stroke="#a9b4c8"/>
+  <line x1="632" y1="576" x2="1128" y2="576" stroke="#c3cbda"/>
+  <text x="644" y="568" class="txtk">Name</text>
+  <text x="760" y="568" class="txtk">Anmeldename</text>
+  <text x="920" y="568" class="txtk">Rollen</text>
+  <text x="1012" y="568" class="txtk">Status</text>
+  <text x="1116" y="568" class="txtk" text-anchor="end">Aktion</text>
+  <g>
+    <rect x="644" y="592" width="90" height="8" class="platz"/>
+    <rect x="760" y="592" width="140" height="8" class="platz"/>
+    <rect x="920" y="588" width="56" height="16" rx="8" fill="#ffffff" stroke="#5a6f96"/>
+    <rect x="980" y="588" width="40" height="16" rx="8" fill="#ffffff" stroke="#5a6f96"/>
+    <rect x="1012" y="588" width="40" height="16" rx="8" class="knopf"/>
+    <text x="1116" y="600" class="txtk" text-anchor="end">Bearbeiten</text>
+  </g>
+  <g>
+    <rect x="644" y="628" width="80" height="8" class="platz"/>
+    <rect x="760" y="628" width="130" height="8" class="platz"/>
+    <rect x="920" y="624" width="56" height="16" rx="8" fill="#ffffff" stroke="#5a6f96"/>
+    <rect x="1012" y="624" width="40" height="16" rx="8" class="knopf"/>
+    <text x="1116" y="636" class="txtk" text-anchor="end">Bearbeiten</text>
+  </g>
+  <g>
+    <rect x="644" y="664" width="96" height="8" class="platz"/>
+    <rect x="760" y="664" width="150" height="8" class="platz"/>
+    <rect x="920" y="660" width="72" height="16" rx="8" fill="#8a6d1f"/>
+    <rect x="1012" y="660" width="40" height="16" rx="8" class="knopf"/>
+    <text x="1116" y="672" class="txtk" text-anchor="end">Bearbeiten</text>
+  </g>
+  <g>
+    <rect x="644" y="700" width="86" height="8" class="platz"/>
+    <rect x="760" y="700" width="140" height="8" class="platz"/>
+    <rect x="920" y="696" width="56" height="16" rx="8" fill="#ffffff" stroke="#5a6f96"/>
+    <rect x="1012" y="696" width="40" height="16" rx="8" class="knopf"/>
+    <text x="1116" y="708" class="txtk" text-anchor="end">Bearbeiten</text>
+  </g>
+  <g>
+    <rect x="644" y="736" width="90" height="8" class="platz"/>
+    <rect x="760" y="736" width="132" height="8" class="platz"/>
+    <rect x="920" y="732" width="56" height="16" rx="8" fill="#ffffff" stroke="#5a6f96"/>
+    <rect x="1012" y="732" width="46" height="16" rx="8" fill="#ffffff" stroke="#a9b4c8"/>
+    <text x="1116" y="744" class="txtk" text-anchor="end">Bearbeiten</text>
+  </g>
+
+  <text x="632" y="800" class="note">Die Rollen werden im Dialog als Mehrfachauswahl vergeben; ein Schalter steuert den Aktivstatus.</text>
+  <text x="632" y="816" class="note">Das eigene Konto ist gekennzeichnet und kann sich weder die Administratorrolle entziehen</text>
+  <text x="632" y="832" class="note">noch selbst deaktiviert werden.</text>
+  <text x="632" y="856" class="note">Diese Seite erscheint in der Hauptnavigation nur bei vorhandener Rolle ADMIN.</text>
+</g>
+</svg>

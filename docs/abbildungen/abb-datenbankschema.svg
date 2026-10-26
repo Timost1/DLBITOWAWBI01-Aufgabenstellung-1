@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="660" viewBox="0 0 840 660" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="kf" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 M 13 1 L 13 13" fill="none" stroke="#22314f" stroke-width="1.4"/>
+    </marker>
+    <marker id="e1" viewBox="0 0 10 14" refX="2" refY="7" markerWidth="9" markerHeight="13" orient="auto-start-reverse">
+      <path d="M 3 1 L 3 13" fill="none" stroke="#22314f" stroke-width="1.7"/>
+    </marker>
+  </defs>
+  <style>
+    .tb { fill:#ffffff; stroke:#0b3d91; stroke-width:1.7; }
+    .tk { fill:#0b3d91; }
+    .hb { fill:#ffffff; stroke:#4d6b96; stroke-width:1.7; }
+    .hk { fill:#4d6b96; }
+    .tn { font-size:14px; font-weight:700; fill:#ffffff; text-anchor:middle; }
+    .sp { font-size:12.5px; font-family:Consolas, monospace; fill:#22314f; }
+    .hi { font-size:11px; fill:#5a6b8c; }
+    .bz { font-size:12px; fill:#3d4f75; }
+    .lg { font-size:12px; fill:#3d4f75; }
+  </style>
+
+  <rect width="840" height="660" fill="#ffffff"/>
+
+  <!-- mandant -->
+  <rect class="tb" x="300" y="16" width="240" height="106" rx="3"/>
+  <rect class="tk" x="300" y="16" width="240" height="26" rx="3"/>
+  <text class="tn" x="420" y="34">mandant</text>
+  <text class="sp" x="312" y="60"><tspan font-weight="700">PK</tspan>  id            BIGINT</text>
+  <text class="sp" x="312" y="79"><tspan font-weight="700">UQ</tspan>  kuerzel       VARCHAR(60)</text>
+  <text class="sp" x="312" y="98">    name          VARCHAR(120)</text>
+  <text class="sp" x="312" y="117">    aktiv         BOOLEAN</text>
+
+  <!-- benutzer -->
+  <rect class="tb" x="20" y="220" width="250" height="180" rx="3"/>
+  <rect class="tk" x="20" y="220" width="250" height="26" rx="3"/>
+  <text class="tn" x="145" y="238">benutzer</text>
+  <text class="sp" x="32" y="264"><tspan font-weight="700">PK</tspan>  id            BIGINT</text>
+  <text class="sp" x="32" y="283"><tspan font-weight="700">FK</tspan>  mandant_id    BIGINT</text>
+  <text class="sp" x="32" y="302">    email         VARCHAR(160)</text>
+  <text class="sp" x="32" y="321">    passwort_hash VARCHAR(100)</text>
+  <text class="sp" x="32" y="340">    vorname       VARCHAR(60)</text>
+  <text class="sp" x="32" y="359">    nachname      VARCHAR(60)</text>
+  <text class="sp" x="32" y="378">    aktiv         BOOLEAN</text>
+  <line x1="20" y1="385" x2="270" y2="385" stroke="#b9c4d8"/>
+  <text class="hi" x="32" y="396">UQ (mandant_id, email)</text>
+
+  <!-- benutzer_rolle -->
+  <rect class="hb" x="20" y="466" width="250" height="86" rx="3"/>
+  <rect class="hk" x="20" y="466" width="250" height="26" rx="3"/>
+  <text class="tn" x="145" y="484">benutzer_rolle</text>
+  <text class="sp" x="32" y="510"><tspan font-weight="700">FK</tspan>  benutzer_id   BIGINT</text>
+  <text class="sp" x="32" y="529">    rolle         VARCHAR(30)</text>
+  <line x1="20" y1="536" x2="270" y2="536" stroke="#b9c4d8"/>
+  <text class="hi" x="32" y="547">Rollen (@ElementCollection)</text>
+
+  <!-- projekt -->
+  <rect class="tb" x="300" y="220" width="240" height="199" rx="3"/>
+  <rect class="tk" x="300" y="220" width="240" height="26" rx="3"/>
+  <text class="tn" x="420" y="238">projekt</text>
+  <text class="sp" x="312" y="264"><tspan font-weight="700">PK</tspan>  id            BIGINT</text>
+  <text class="sp" x="312" y="283"><tspan font-weight="700">FK</tspan>  mandant_id    BIGINT</text>
+  <text class="sp" x="312" y="302"><tspan font-weight="700">FK</tspan>  leiter_id     BIGINT</text>
+  <text class="sp" x="312" y="321">    name          VARCHAR(120)</text>
+  <text class="sp" x="312" y="340">    kunde         VARCHAR(120)</text>
+  <text class="sp" x="312" y="359">    beschreibung  VARCHAR(2000)</text>
+  <text class="sp" x="312" y="378">    status        VARCHAR(20)</text>
+  <text class="sp" x="312" y="397">    start_datum   DATE</text>
+  <text class="sp" x="312" y="416">    end_datum     DATE</text>
+
+  <!-- aufgabe -->
+  <rect class="tb" x="580" y="220" width="240" height="180" rx="3"/>
+  <rect class="tk" x="580" y="220" width="240" height="26" rx="3"/>
+  <text class="tn" x="700" y="238">aufgabe</text>
+  <text class="sp" x="592" y="264"><tspan font-weight="700">PK</tspan>  id            BIGINT</text>
+  <text class="sp" x="592" y="283"><tspan font-weight="700">FK</tspan>  projekt_id    BIGINT</text>
+  <text class="sp" x="592" y="302"><tspan font-weight="700">FK</tspan>  bearbeiter_id BIGINT</text>
+  <text class="sp" x="592" y="321">    titel         VARCHAR(160)</text>
+  <text class="sp" x="592" y="340">    beschreibung  VARCHAR(2000)</text>
+  <text class="sp" x="592" y="359">    status        VARCHAR(20)</text>
+  <text class="sp" x="592" y="378">    faellig_am    DATE</text>
+  <text class="sp" x="592" y="397">    erstellt_am   TIMESTAMP</text>
+
+  <!-- projekt_mitglied -->
+  <rect class="hb" x="300" y="466" width="240" height="86" rx="3"/>
+  <rect class="hk" x="300" y="466" width="240" height="26" rx="3"/>
+  <text class="tn" x="420" y="484">projekt_mitglied</text>
+  <text class="sp" x="312" y="510"><tspan font-weight="700">FK</tspan>  projekt_id    BIGINT</text>
+  <text class="sp" x="312" y="529"><tspan font-weight="700">FK</tspan>  benutzer_id   BIGINT</text>
+  <line x1="300" y1="536" x2="540" y2="536" stroke="#b9c4d8"/>
+  <text class="hi" x="312" y="547">Auflösung der n:m-Beziehung</text>
+
+  <!-- Beziehungen -->
+  <path d="M 330 122 L 330 170 L 145 170 L 145 220" fill="none" stroke="#22314f" stroke-width="1.5"
+        marker-start="url(#e1)" marker-end="url(#kf)"/>
+  <text class="bz" x="152" y="162">1 : n</text>
+
+  <line x1="450" y1="122" x2="450" y2="220" stroke="#22314f" stroke-width="1.5"
+        marker-start="url(#e1)" marker-end="url(#kf)"/>
+  <text class="bz" x="458" y="176">1 : n</text>
+
+  <line x1="540" y1="264" x2="580" y2="264" stroke="#22314f" stroke-width="1.5"
+        marker-start="url(#e1)" marker-end="url(#kf)"/>
+  <text class="bz" x="560" y="256" text-anchor="middle">1 : n</text>
+
+  <line x1="270" y1="302" x2="300" y2="302" stroke="#22314f" stroke-width="1.5"
+        marker-start="url(#e1)" marker-end="url(#kf)"/>
+  <text class="bz" x="285" y="294" text-anchor="middle">leitet</text>
+
+  <path d="M 270 264 L 285 264 L 285 196 L 800 196 L 800 220" fill="none" stroke="#22314f"
+        stroke-width="1.5" stroke-dasharray="6 4" marker-start="url(#e1)" marker-end="url(#kf)"/>
+  <text class="bz" x="600" y="190" text-anchor="middle">bearbeitet (optional)</text>
+
+  <line x1="145" y1="400" x2="145" y2="466" stroke="#22314f" stroke-width="1.5"
+        marker-start="url(#e1)" marker-end="url(#kf)"/>
+  <text class="bz" x="152" y="438">1 : n</text>
+
+  <path d="M 70 400 L 70 430 L 380 430 L 380 466" fill="none" stroke="#22314f" stroke-width="1.5"
+        marker-start="url(#e1)" marker-end="url(#kf)"/>
+  <path d="M 480 419 L 480 466" fill="none" stroke="#22314f" stroke-width="1.5"
+        marker-start="url(#e1)" marker-end="url(#kf)"/>
+
+  <!-- Hinweise -->
+  <rect x="580" y="430" width="240" height="104" rx="5" fill="#f7f9fc" stroke="#b9c4d8"/>
+  <text x="592" y="450" style="font-size:12.5px; font-weight:700; fill:#12203c">Mandantentrennung</text>
+  <text class="lg" x="592" y="470">benutzer und projekt tragen mandant_id;</text>
+  <text class="lg" x="592" y="488">aufgabe erbt den Mandanten über</text>
+  <text class="lg" x="592" y="506">projekt_id. Alle Abfragen filtern</text>
+  <text class="lg" x="592" y="524">über mandant_id.</text>
+
+  <rect x="580" y="548" width="240" height="94" rx="5" fill="#f7f9fc" stroke="#b9c4d8"/>
+  <text x="592" y="568" style="font-size:12.5px; font-weight:700; fill:#12203c">Legende</text>
+  <text class="lg" x="592" y="588"><tspan font-weight="700" font-family="Consolas, monospace">PK</tspan> Primärschlüssel · <tspan font-weight="700" font-family="Consolas, monospace">FK</tspan> Fremdschlüssel</text>
+  <text class="lg" x="592" y="608"><tspan font-weight="700" font-family="Consolas, monospace">UQ</tspan> Eindeutigkeitsbedingung</text>
+  <text class="lg" x="592" y="630">Krähenfuß = n-Seite, Strich = 1-Seite</text>
+</svg>

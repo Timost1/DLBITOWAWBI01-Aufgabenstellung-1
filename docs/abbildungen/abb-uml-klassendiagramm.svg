@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="770" viewBox="0 0 860 770" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="assoz" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#22314f" stroke-width="1.5"/>
+    </marker>
+    <marker id="assozg" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#8a6d1f" stroke-width="1.5"/>
+    </marker>
+    <marker id="komp" viewBox="0 0 16 16" refX="2" refY="8" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M 1 8 L 8 4 L 15 8 L 8 12 z" fill="#22314f"/>
+    </marker>
+  </defs>
+  <style>
+    .kl { fill:#ffffff; stroke:#22314f; stroke-width:1.7; }
+    .klk { fill:#dde6f4; stroke:#22314f; stroke-width:1.7; }
+    .kn { font-size:17px; font-weight:700; fill:#12203c; text-anchor:middle; }
+    .at { font-size:13.5px; fill:#22314f; font-family:Consolas, monospace; }
+    .no { font-size:12px; fill:#5a6b8c; font-style:italic; }
+    .en { fill:#fbf6ea; stroke:#8a6d1f; stroke-width:1.7; }
+    .enk { fill:#f2e6c8; stroke:#8a6d1f; stroke-width:1.7; }
+    .ens { font-size:12.5px; fill:#6b5416; text-anchor:middle; }
+    .enn { font-size:16px; font-weight:700; fill:#5a4612; text-anchor:middle; }
+    .env { font-size:13.5px; fill:#5a4612; font-family:Consolas, monospace; }
+    .mu { font-size:13px; fill:#22314f; }
+    .rl { font-size:13px; fill:#3d4f75; }
+  </style>
+
+  <rect width="860" height="770" fill="#ffffff"/>
+
+  <!-- Enumeration Rolle -->
+  <rect class="en" x="20" y="16" width="205" height="104"/>
+  <rect class="enk" x="20" y="16" width="205" height="42"/>
+  <text class="ens" x="122" y="33">&#171;enumeration&#187;</text>
+  <text class="enn" x="122" y="52">Rolle</text>
+  <text class="env" x="32" y="78">ADMIN</text>
+  <text class="env" x="32" y="96">PROJEKTLEITER</text>
+  <text class="env" x="32" y="114">MITARBEITER</text>
+
+  <!-- Mandant -->
+  <rect class="kl" x="330" y="16" width="250" height="132"/>
+  <rect class="klk" x="330" y="16" width="250" height="30"/>
+  <text class="kn" x="455" y="37">Mandant</text>
+  <text class="at" x="342" y="65">- id: Long</text>
+  <text class="at" x="342" y="83">- kuerzel: String</text>
+  <text class="at" x="342" y="101">- name: String</text>
+  <text class="at" x="342" y="119">- aktiv: boolean</text>
+  <line x1="330" y1="128" x2="580" y2="128" stroke="#22314f"/>
+  <text class="no" x="342" y="143">Wurzel der Mandantentrennung</text>
+
+  <!-- Benutzer -->
+  <rect class="kl" x="20" y="236" width="255" height="212"/>
+  <rect class="klk" x="20" y="236" width="255" height="30"/>
+  <text class="kn" x="147" y="257">Benutzer</text>
+  <text class="at" x="32" y="285">- id: Long</text>
+  <text class="at" x="32" y="303">- email: String</text>
+  <text class="at" x="32" y="321">- passwortHash: String</text>
+  <text class="at" x="32" y="339">- vorname: String</text>
+  <text class="at" x="32" y="357">- nachname: String</text>
+  <text class="at" x="32" y="375">- aktiv: boolean</text>
+  <text class="at" x="32" y="393">- rollen: Set&lt;Rolle&gt;</text>
+  <line x1="20" y1="402" x2="275" y2="402" stroke="#22314f"/>
+  <text class="at" x="32" y="420">+ getVollerName()</text>
+  <text class="at" x="32" y="438">+ hatRolle(Rolle)</text>
+
+  <!-- Projekt -->
+  <rect class="kl" x="330" y="236" width="255" height="248"/>
+  <rect class="klk" x="330" y="236" width="255" height="30"/>
+  <text class="kn" x="457" y="257">Projekt</text>
+  <text class="at" x="342" y="285">- id: Long</text>
+  <text class="at" x="342" y="303">- name: String</text>
+  <text class="at" x="342" y="321">- kunde: String</text>
+  <text class="at" x="342" y="339">- beschreibung: String</text>
+  <text class="at" x="342" y="357">- status: Projektstatus</text>
+  <text class="at" x="342" y="375">- startDatum: LocalDate</text>
+  <text class="at" x="342" y="393">- endDatum: LocalDate</text>
+  <line x1="330" y1="402" x2="585" y2="402" stroke="#22314f"/>
+  <text class="at" x="342" y="420">+ istBeteiligt(Benutzer)</text>
+  <text class="at" x="342" y="438">+ istArchiviert()</text>
+  <text class="at" x="342" y="456">+ archivieren()</text>
+  <text class="at" x="342" y="474">+ reaktivieren()</text>
+
+  <!-- Enumeration Projektstatus -->
+  <rect class="en" x="645" y="236" width="195" height="94"/>
+  <rect class="enk" x="645" y="236" width="195" height="42"/>
+  <text class="ens" x="742" y="253">&#171;enumeration&#187;</text>
+  <text class="enn" x="742" y="272">Projektstatus</text>
+  <text class="env" x="657" y="298">AKTIV</text>
+  <text class="env" x="657" y="318">ARCHIVIERT</text>
+
+  <!-- Aufgabe -->
+  <rect class="kl" x="330" y="570" width="255" height="186"/>
+  <rect class="klk" x="330" y="570" width="255" height="30"/>
+  <text class="kn" x="457" y="591">Aufgabe</text>
+  <text class="at" x="342" y="619">- id: Long</text>
+  <text class="at" x="342" y="637">- titel: String</text>
+  <text class="at" x="342" y="655">- beschreibung: String</text>
+  <text class="at" x="342" y="673">- status: Aufgabenstatus</text>
+  <text class="at" x="342" y="691">- faelligAm: LocalDate</text>
+  <text class="at" x="342" y="709">- erstelltAm: Instant</text>
+  <line x1="330" y1="718" x2="585" y2="718" stroke="#22314f"/>
+  <text class="no" x="342" y="734">Teil des Aggregats Projekt;</text>
+  <text class="no" x="342" y="750">Mandant ergibt sich daraus</text>
+
+  <!-- Enumeration Aufgabenstatus -->
+  <rect class="en" x="645" y="570" width="195" height="112"/>
+  <rect class="enk" x="645" y="570" width="195" height="42"/>
+  <text class="ens" x="742" y="587">&#171;enumeration&#187;</text>
+  <text class="enn" x="742" y="606">Aufgabenstatus</text>
+  <text class="env" x="657" y="632">OFFEN</text>
+  <text class="env" x="657" y="652">IN_BEARBEITUNG</text>
+  <text class="env" x="657" y="672">ERLEDIGT</text>
+
+  <!-- Beziehungen -->
+  <line x1="110" y1="236" x2="110" y2="120" stroke="#8a6d1f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#assozg)"/>
+  <text class="mu" x="118" y="142" fill="#6b5416">1..*</text>
+  <text class="rl" x="118" y="196" fill="#6b5416">rollen</text>
+
+  <path d="M 360 148 L 360 192 L 215 192 L 215 236" fill="none" stroke="#22314f" stroke-width="1.6" marker-end="url(#assoz)"/>
+  <text class="mu" x="366" y="168">1</text>
+  <text class="mu" x="222" y="230">0..*</text>
+  <text class="rl" x="248" y="186">gehört zu</text>
+
+  <line x1="500" y1="148" x2="500" y2="236" stroke="#22314f" stroke-width="1.6" marker-end="url(#assoz)"/>
+  <text class="mu" x="492" y="170" text-anchor="end">1</text>
+  <text class="mu" x="492" y="230" text-anchor="end">0..*</text>
+  <text class="rl" x="508" y="196">gehört zu</text>
+
+  <line x1="330" y1="288" x2="275" y2="288" stroke="#22314f" stroke-width="1.6" marker-end="url(#assoz)"/>
+  <text class="mu" x="324" y="281" text-anchor="end">0..*</text>
+  <text class="mu" x="283" y="281">1</text>
+  <text class="rl" x="302" y="308" text-anchor="middle">leitet</text>
+
+  <path d="M 330 356 L 302 356 L 302 402 L 275 402" fill="none" stroke="#22314f" stroke-width="1.6" marker-end="url(#assoz)"/>
+  <text class="mu" x="324" y="349" text-anchor="end">0..*</text>
+  <text class="mu" x="283" y="396">0..*</text>
+  <rect x="282" y="369" width="41" height="15" fill="#ffffff"/>
+  <text class="rl" x="302" y="381" text-anchor="middle">Team</text>
+
+  <line x1="530" y1="484" x2="530" y2="570" stroke="#22314f" stroke-width="1.6" marker-start="url(#komp)" marker-end="url(#assoz)"/>
+  <text class="mu" x="522" y="510" text-anchor="end">1</text>
+  <text class="mu" x="522" y="564" text-anchor="end">0..*</text>
+  <text class="rl" x="540" y="534">enthält</text>
+
+  <path d="M 330 646 L 147 646 L 147 448" fill="none" stroke="#22314f" stroke-width="1.6" marker-end="url(#assoz)"/>
+  <text class="mu" x="324" y="639" text-anchor="end">0..*</text>
+  <text class="mu" x="155" y="468">0..1</text>
+  <text class="rl" x="238" y="638" text-anchor="middle">bearbeitet von</text>
+
+  <line x1="585" y1="310" x2="645" y2="292" stroke="#8a6d1f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#assozg)"/>
+  <line x1="585" y1="640" x2="645" y2="636" stroke="#8a6d1f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#assozg)"/>
+
+  <!-- Legende -->
+  <rect x="20" y="490" width="265" height="112" rx="6" fill="#f7f9fc" stroke="#b9c4d8"/>
+  <text x="32" y="512" style="font-size:13.5px; font-weight:700; fill:#12203c">Legende</text>
+  <line x1="32" y1="532" x2="72" y2="532" stroke="#22314f" stroke-width="1.6" marker-end="url(#assoz)"/>
+  <text class="rl" x="82" y="536">Assoziation mit Multiplizität</text>
+  <line x1="32" y1="558" x2="72" y2="558" stroke="#22314f" stroke-width="1.6" marker-start="url(#komp)"/>
+  <text class="rl" x="82" y="562">Komposition (Aggregatgrenze)</text>
+  <line x1="32" y1="584" x2="72" y2="584" stroke="#8a6d1f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#assozg)"/>
+  <text class="rl" x="82" y="588">Enumeration</text>
+</svg>

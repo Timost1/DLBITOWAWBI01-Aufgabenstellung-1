@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projektportal – Projekt- und Aufgabenmanagement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  Mount-Punkt der Single-Page-Anwendung. Spring Boot liefert diese Datei als
+  statisches Asset unter "/" aus; die gesamte Oberflaeche wird anschliessend im
+  Browser von React aufgebaut. Das Backend beantwortet ausschliesslich
+  REST-Aufrufe unter /api und rendert selbst kein HTML.
+-->
+<div id="root"></div>
+<noscript>
+    Diese Anwendung benötigt JavaScript. Bitte aktivieren Sie JavaScript in Ihrem Browser.
+</noscript>
+
+<!--
+  Bibliotheken als UMD-Builds. Sie sind lokal im Projekt abgelegt und werden vom
+  eigenen Server ausgeliefert; damit ist die Anwendung ohne Internetzugang und
+  ohne Build-Werkzeug lauffaehig. React und ReactDOM muessen vor Material UI
+  geladen werden, da Material UI beide als globale Objekte erwartet.
+-->
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="vendor/material-ui.production.min.js"></script>
+
+<!-- Anwendungscode, nach Verantwortlichkeiten getrennt und in Ladereihenfolge -->
+<script src="js/api.js"></script>
+<script src="js/bausteine.js"></script>
+<script src="js/ansicht-anmeldung.js"></script>
+<script src="js/ansicht-projekte.js"></script>
+<script src="js/ansicht-projektdetail.js"></script>
+<script src="js/ansicht-benutzer.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

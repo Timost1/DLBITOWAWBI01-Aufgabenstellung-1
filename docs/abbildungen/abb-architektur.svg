@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="640" viewBox="0 0 820 640" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="pf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#33415c"/>
+    </marker>
+  </defs>
+  <style>
+    .schicht { font-size:17px; font-weight:700; }
+    .unter { font-size:13px; }
+    .stack { font-size:12px; fill:#5a6b8c; }
+    .bt { font-size:13.5px; font-weight:600; fill:#12203c; }
+    .bx { font-size:12.5px; }
+    .kopplung { font-size:14px; font-weight:600; fill:#33415c; }
+  </style>
+
+  <rect width="820" height="640" fill="#ffffff"/>
+
+  <!-- Client -->
+  <rect x="20" y="18" width="780" height="204" rx="9" fill="#eef3fb" stroke="#0b3d91" stroke-width="2"/>
+  <text class="schicht" x="38" y="44" fill="#0b3d91">Client (Browser)</text>
+  <text class="unter" x="38" y="64" fill="#33415c">Präsentationsschicht – Single-Page-Anwendung, clientseitig gerendert</text>
+  <text class="stack" x="782" y="44" text-anchor="end">React 18 (UMD) · Material UI 5 · kein Build-Werkzeug</text>
+
+  <rect x="38" y="78" width="360" height="52" rx="6" fill="#ffffff" stroke="#8aa4cf"/>
+  <text class="bt" x="50" y="97">app.js</text>
+  <text class="bx" x="50" y="115" fill="#4a5a7a">Theme, Sitzungszustand, Routing über #/…</text>
+
+  <rect x="422" y="78" width="360" height="52" rx="6" fill="#ffffff" stroke="#8aa4cf"/>
+  <text class="bt" x="434" y="97">bausteine.js</text>
+  <text class="bx" x="434" y="115" fill="#4a5a7a">gemeinsame Komponenten, useReducer-Muster</text>
+
+  <rect x="38" y="140" width="360" height="34" rx="6" fill="#ffffff" stroke="#8aa4cf"/>
+  <text class="bx" x="50" y="162" fill="#12203c"><tspan font-weight="600">ansicht-anmeldung.js</tspan> · <tspan font-weight="600">ansicht-projekte.js</tspan></text>
+
+  <rect x="422" y="140" width="360" height="34" rx="6" fill="#ffffff" stroke="#8aa4cf"/>
+  <text class="bx" x="434" y="162" fill="#12203c"><tspan font-weight="600">ansicht-projektdetail.js</tspan> · <tspan font-weight="600">ansicht-benutzer.js</tspan></text>
+
+  <rect x="38" y="182" width="744" height="30" rx="6" fill="#dbe6f7" stroke="#8aa4cf"/>
+  <text class="bx" x="50" y="202" fill="#12203c"><tspan font-weight="600">api.js</tspan> – einzige Stelle mit HTTP-Zugriff: fetch, CSRF-Token, Fehlerauswertung</text>
+
+  <!-- Kopplung -->
+  <line x1="330" y1="222" x2="330" y2="268" stroke="#33415c" stroke-width="1.7" marker-end="url(#pf)"/>
+  <line x1="490" y1="268" x2="490" y2="222" stroke="#33415c" stroke-width="1.7" marker-end="url(#pf)"/>
+  <rect x="180" y="231" width="460" height="26" rx="13" fill="#ffffff"/>
+  <text class="kopplung" x="410" y="249" text-anchor="middle">HTTP(S) · REST · JSON · Sitzungscookie + CSRF-Token</text>
+
+  <!-- Server -->
+  <rect x="20" y="268" width="780" height="266" rx="9" fill="#f3f6f2" stroke="#2f6b3a" stroke-width="2"/>
+  <text class="schicht" x="38" y="294" fill="#2f6b3a">Server (Spring Boot, eingebetteter Tomcat)</text>
+  <text class="stack" x="782" y="294" text-anchor="end">Java 21 · Maven · Spring MVC, Security, Data JPA</text>
+
+  <rect x="38" y="308" width="744" height="30" rx="6" fill="#e2eddf" stroke="#7fa886"/>
+  <text class="bx" x="50" y="328" fill="#1d3b22"><tspan font-weight="600">Spring-Security-Filterkette</tspan> – Authentifizierung, Pfad- und Rollenregeln, CSRF-Prüfung</text>
+
+  <rect x="38" y="348" width="744" height="60" rx="6" fill="#ffffff" stroke="#7fa886"/>
+  <text class="bt" x="50" y="368" fill="#1d3b22">Paket web – Schnittstellenschicht</text>
+  <text class="bx" x="50" y="386" fill="#42604a">Auth-, Projekt-, Aufgabe-, Benutzer-, Mitarbeitende-, CsrfController</text>
+  <text class="bx" x="50" y="402" fill="#42604a">web.dto (Records mit Bean-Validation) · GlobalerFehlerHandler (@RestControllerAdvice)</text>
+
+  <rect x="38" y="418" width="744" height="46" rx="6" fill="#ffffff" stroke="#7fa886"/>
+  <text class="bt" x="50" y="438" fill="#1d3b22">Paket service – Anwendungs-/Logikschicht</text>
+  <text class="bx" x="50" y="456" fill="#42604a">Projekt-, Aufgabe-, BenutzerService · ZugriffskontrollService (Autorisierung je Datensatz)</text>
+
+  <rect x="38" y="474" width="364" height="46" rx="6" fill="#ffffff" stroke="#7fa886"/>
+  <text class="bt" x="50" y="494" fill="#1d3b22">Paket domain</text>
+  <text class="bx" x="50" y="512" fill="#42604a">JPA-Entities: Mandant, Benutzer, Projekt, Aufgabe</text>
+
+  <rect x="418" y="474" width="364" height="46" rx="6" fill="#ffffff" stroke="#7fa886"/>
+  <text class="bt" x="430" y="494" fill="#1d3b22">Paket repository</text>
+  <text class="bx" x="430" y="512" fill="#42604a">Spring Data JPA, jede Abfrage mandantengebunden</text>
+
+  <!-- Persistenz -->
+  <line x1="410" y1="534" x2="410" y2="574" stroke="#33415c" stroke-width="1.7" marker-end="url(#pf)"/>
+  <text class="bx" x="424" y="559" fill="#33415c" font-weight="600">JDBC · Hibernate als JPA-Provider (ORM)</text>
+
+  <rect x="20" y="574" width="780" height="52" rx="9" fill="#fdf4ec" stroke="#a15c1e" stroke-width="2"/>
+  <text class="schicht" x="38" y="598" fill="#a15c1e">Datenhaltungsschicht</text>
+  <text class="bx" x="38" y="617" fill="#6b4520">Relationale Datenbank H2 im Dateimodus – austauschbar gegen PostgreSQL oder MySQL</text>
+</svg>
