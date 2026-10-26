@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="660" viewBox="0 0 840 660" font-family="Segoe UI, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="574" viewBox="0 0 840 574" font-family="Segoe UI, Arial, sans-serif">
   <defs>
     <marker id="kf" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
       <path d="M 1 1 L 13 7 L 1 13 M 13 1 L 13 13" fill="none" stroke="#22314f" stroke-width="1.4"/>
@@ -19,7 +19,7 @@
     .lg { font-size:12px; fill:#3d4f75; }
   </style>
 
-  <rect width="840" height="660" fill="#ffffff"/>
+  <rect width="840" height="574" fill="#ffffff"/>
 
   <!-- mandant -->
   <rect class="tb" x="300" y="16" width="240" height="106" rx="3"/>
@@ -51,7 +51,7 @@
   <text class="sp" x="32" y="510"><tspan font-weight="700">FK</tspan>  benutzer_id   BIGINT</text>
   <text class="sp" x="32" y="529">    rolle         VARCHAR(30)</text>
   <line x1="20" y1="536" x2="270" y2="536" stroke="#b9c4d8"/>
-  <text class="hi" x="32" y="547">Rollen (@ElementCollection)</text>
+  <text class="hi" x="32" y="547">Rollen eines Benutzers</text>
 
   <!-- projekt -->
   <rect class="tb" x="300" y="220" width="240" height="199" rx="3"/>
@@ -119,17 +119,9 @@
   <path d="M 480 419 L 480 466" fill="none" stroke="#22314f" stroke-width="1.5"
         marker-start="url(#e1)" marker-end="url(#kf)"/>
 
-  <!-- Hinweise -->
-  <rect x="580" y="430" width="240" height="104" rx="5" fill="#f7f9fc" stroke="#b9c4d8"/>
-  <text x="592" y="450" style="font-size:12.5px; font-weight:700; fill:#12203c">Mandantentrennung</text>
-  <text class="lg" x="592" y="470">benutzer und projekt tragen mandant_id;</text>
-  <text class="lg" x="592" y="488">aufgabe erbt den Mandanten über</text>
-  <text class="lg" x="592" y="506">projekt_id. Alle Abfragen filtern</text>
-  <text class="lg" x="592" y="524">über mandant_id.</text>
-
-  <rect x="580" y="548" width="240" height="94" rx="5" fill="#f7f9fc" stroke="#b9c4d8"/>
-  <text x="592" y="568" style="font-size:12.5px; font-weight:700; fill:#12203c">Legende</text>
-  <text class="lg" x="592" y="588"><tspan font-weight="700" font-family="Consolas, monospace">PK</tspan> Primärschlüssel · <tspan font-weight="700" font-family="Consolas, monospace">FK</tspan> Fremdschlüssel</text>
-  <text class="lg" x="592" y="608"><tspan font-weight="700" font-family="Consolas, monospace">UQ</tspan> Eindeutigkeitsbedingung</text>
-  <text class="lg" x="592" y="630">Krähenfuß = n-Seite, Strich = 1-Seite</text>
+  <rect x="580" y="430" width="240" height="94" rx="5" fill="#f7f9fc" stroke="#b9c4d8"/>
+  <text x="592" y="450" style="font-size:12.5px; font-weight:700; fill:#12203c">Legende</text>
+  <text class="lg" x="592" y="470"><tspan font-weight="700" font-family="Consolas, monospace">PK</tspan> Primärschlüssel · <tspan font-weight="700" font-family="Consolas, monospace">FK</tspan> Fremdschlüssel</text>
+  <text class="lg" x="592" y="490"><tspan font-weight="700" font-family="Consolas, monospace">UQ</tspan> Eindeutigkeitsbedingung</text>
+  <text class="lg" x="592" y="512">Krähenfuß = n-Seite, Strich = 1-Seite</text>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="780" height="520" viewBox="0 0 780 520" font-family="Segoe UI, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="408" viewBox="0 108 780 408" font-family="Segoe UI, Arial, sans-serif">
   <defs>
     <marker id="np" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#33415c"/>
@@ -67,13 +67,14 @@
 
   <!-- Kanten -->
   <path d="M 200 216 L 245 216 L 245 150 L 290 150" fill="none" stroke="#33415c" stroke-width="1.6" marker-end="url(#np)"/>
-  <text class="kt" x="246" y="192" text-anchor="middle">Anmeldung</text>
+  <rect x="206" y="162" width="78" height="19" fill="#ffffff"/>
+  <text class="kt" x="245" y="176" text-anchor="middle">Anmeldung</text>
 
-  <path d="M 290 190 L 245 190 L 245 252 L 200 252" fill="none" stroke="#33415c" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#np)"/>
+  <path d="M 290 190 L 258 190 L 258 252 L 200 252" fill="none" stroke="#33415c" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#np)"/>
   <text class="kt" x="40" y="292">Abmelden oder Sitzungsende</text>
 
   <path d="M 490 145 L 570 145" fill="none" stroke="#33415c" stroke-width="1.6" marker-end="url(#np)"/>
-  <text class="kt" x="516" y="137" text-anchor="middle">„Projekt öffnen“</text>
+  <text class="kt" style="font-size:11.5px" x="530" y="139" text-anchor="middle">Projekt öffnen</text>
 
   <path d="M 570 182 L 530 182 L 530 196 L 490 196" fill="none" stroke="#33415c" stroke-width="1.6" marker-end="url(#np)"/>
   <text class="kt" x="530" y="218" text-anchor="middle">Brotkrumenpfad</text>
